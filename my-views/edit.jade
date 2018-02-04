@@ -2,11 +2,10 @@ extends layout
 
 block subject
     h1 Edit a new chat room
-    form(action='/admin/rooms/edit', method='post')
+    form(method='post')
         fieldset.form-group
             label Name:
             input.form-control(name='name', type='text', value='#{room.name}')
-            input.hidden(name='id', type='text', value='#{room.id}')
             small.text-muted Give your chat room a meaningful name for people to refer to it
         button.btn.btn-primary(type='submit') Edit
         a.btn.btn-default(href='/admin/rooms') Cancel
