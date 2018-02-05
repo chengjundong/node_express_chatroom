@@ -27,9 +27,6 @@ app.use('/admin', adminRouter);
 const apiRouter = require('./api');
 app.use('/api', apiRouter);
 
-const loginRouter = require('./login');
-app.use(loginRouter);
-
 app.listen(8080, () => {
     console.log('server starts at 8080...');
 });
